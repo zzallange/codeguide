@@ -1,0 +1,152 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Code Guide</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="description" content="선희의 코드가이드">
+		<meta name="keywords" content="웹퍼블리셔,양선희,포트폴리오,html,css,javascript">
+		<meta name="author" content="양선희">
+		<meta property="og:image">
+		<style>
+            html,body {margin: 0; padding: 0;}
+            div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0;padding: 0;-webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box;}
+            
+            .guide_wrap {padding: 20px; box-sizing:border-box;}
+            header {padding-bottom: 20px; border-bottom: 1px solid #111;}
+            header h1 {margin-bottom: 15px;}
+            header .code_date {margin-bottom: 20px; list-style: none;}
+            header .code_date > li:first-child {margin: 0 0 10px 0;}
+            header .code_date > li {margin-bottom: 5px;}
+            header .code_date li {margin-left: 15px;}
+            header .code_date li span em {font-style: normal;}
+            header .code_date .detail {margin-top: 5px; list-style: none; font-size: 14px; color: rgba(0,0,0,.6)}
+            header .site a {font-weight: bold; color: #111;}
+            main {padding-top: 15px;}
+            .code_info {width: 100%; border-collapse: collapse; text-align: center; font-size: 13px;}
+            .code_info .title {background: rgba(0,0,0,.05);}
+            .code_info .title th {padding: 5px 0; }
+            .code_info thead tr {border: 0 none;}
+            .code_info tbody tr {border: 1px solid rgba(0,0,0,.07);}
+            .code_info tr .name {border-right: 1px solid rgba(0,0,0,.07);}
+            .code_info tr:hover {background: rgba(0,0,0,.05);}
+            .code_info td {padding: 5px 0;}
+            .code_info tr.active {background: gold;}
+            .code_info td:not(.name) {text-align: left; padding-left: 10%;}
+            .code_info td .hover_color {color:#004ddc; }
+            .code_info td .bg_color {color: #595959; background: rgba(0,0,0,.03); }
+        </style>
+        <script src="js/jquery-1.11.1.min.js"></script>
+	</head>
+
+	<body>
+        <div class="guide_wrap">
+            <header>
+                <h1>web01. M point몰</h1>
+                <ul class="code_date">
+                    <li>퍼블일정</li>
+                    <li>&middot; 메인페이지 마크업작성 -
+                        <span>1일</span>
+                        <ul class="detail">
+                            <li>pc 화면</li>
+                            <li>모바일 화면</li>
+                        </ul>
+                    </li>
+                    <li>&middot; 반응형에 맞춘 css적용 -
+                        <span>3일</span>
+                        <ul class="detail">
+                            <li>display : flex적용</li>
+                            <li>margin, font - rem단위 사용</li>
+                            <li>반응형에 따라 줄어들게끔 a링크에 padding-bottom: % 적용</li>
+                            <li>width : calc() 계산 적용</li>
+                        </ul>
+                    </li>
+                    <li>&middot; 스크립트 적용 -
+                        <span>2일</span>
+                        <ul class="detail">
+                            <li>스와이프 슬라이드 적용</li>
+                            <li>탑버튼 적용</li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="site">
+                    사이트주소 : <a href="https://zzallange.github.io/hyundae/mpoint.html" target="_blank">https://zzallange.github.io/hyundae/mpoint.html</a>
+                </div>
+            </header>
+            <main>
+                <table class="code_info">
+                    <colgroup>
+                        <col width="10%">
+                        <col width="*">
+                    </colgroup>
+                    <thead>
+                        <tr class="title">
+                            <th colspan="4">코드 정의서</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="name">Color</td>
+                            <td>reset: #111/ 
+                                hover:<span class="hover_color"> #004ddc</span>/
+                                bg-color:
+                                <span class="bg_color">rgba(0,0,0,.03)</span>
+                                </td>
+                        </tr>
+                        <tr>
+                            <td class="name">Font</td>
+                            <td>10px기준으로 1.2rem = 12px</td>
+                        </tr>
+                        <tr>
+                            <td class="name">margin-top</td>
+                            <td>product > item : 9rem = 90px </td>
+                        </tr>
+                        <tr>
+                            <td class="name">padding</td>
+                            <td>section : 4.8rem = 48px</td>
+                        </tr>
+                        <tr>
+                            <td class="name">z-index</td>
+                            <td>header:110 / m_header:100 </td>
+                        </tr>
+                        <tr>
+                            <td class="name">border-radius</td>
+                            <td>prd-img:.8rem/label-benefit: 1.2rem/</td>
+                        </tr>
+                        <tr>
+                            <td class="name">mediaquery</td>
+                            <td>deskTop:1280 / 1040 mobile:900</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </main>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $('tr').click(function(){
+                    $(this).toggleClass('active');
+                    $(this).siblings('tr').removeClass('active');
+                })    
+            });//end
+        </script>
+	</body>
+</html>
+
+
+
+
+<!--
+코드정의서
+
+-전체폰트 10px rem으로 계산시 *10 
+ body {font-size:1.2rem} 1.2rem = 12px
+
+-hover시 컬러: #004ddc
+
+-thumb이미지 크기값대신 padding-bottom으로 기기별 줄어들게 설정    
+      
+-상품이미지 감싸는태그:after로 백그라운드 rgba(0,0,0,.03)
+  -->
+

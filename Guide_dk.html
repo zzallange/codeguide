@@ -1,0 +1,475 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Code Guide - Drinkeat</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="description" content="선희의 코드가이드">
+		<meta name="keywords" content="웹퍼블리셔,양선희,포트폴리오,html,css,javascript">
+		<meta name="author" content="양선희">
+        <meta name="description" content="웹퍼블리셔,양선희,포트폴리오,html,css,javascript">
+		<meta name="NaverBot" content="All">
+		<meta name="NaverBot" content="index,follow">
+		<meta name="Yeti" content="All">
+		<meta name="Yeti" content="index,follow">
+		<meta property="og:url" content="http://www.naverlabs.com/">
+		<meta property="og:title" content="NAVER LABS">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="https://www.naverlabs.com/img/naverlabs.png">
+		<meta property="og:description" content="sunny의 naver labs 퍼블리싱 작업입니다.">
+		<meta property="og:image">
+		<link rel="stylesheet" href="css/Guide_dk.css">
+	</head>
+
+	<body>
+        <div class="guide_wrap">
+            <header>
+                <h1>Code-guide. Drinkeat</h1>
+                <table class="code_info">
+                    <colgroup>
+                        <col width="35%">
+                        <col width="*">
+                    </colgroup>
+                    <thead>
+                        <tr class="title">
+                            <th colspan="4">마크업 및 구조</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="name">메인 페이지</td>
+                            <td><strong>drk_main / drk_trend / drk_special / drk_cont / dk_ad / dk_sns / drk_footer</strong><br>
+                            drk_main : PC 스와이프 슬라이드 bg 위에 썸네일과 텍스트 / mobile 텍스트<br>
+                            drk_trend : PC컨텐츠 리스트 3개 / tablet 2개 / mobile 1개<br>
+                            drk_special : 컬러배경 위 탭 컨텐츠<br>
+                            drk_cont : 썸네일과 텍스트<br>
+                            dk_ad : 배너영역
+                            common : 탑버튼 적용
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name">기사 페이지</td>
+                            <td>
+                                <strong>float_bar</strong> 헤더 고정, 스크롤시 로딩바 적용<br>
+                                <strong>share_box</strong> 스크롤시 sns공유버튼 따라오기 적용<br>
+                                <strong>art_popup</strong> 스크롤시 기사뷰 하단 추천기사 팝업창 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name">리스트별 페이지</td>
+                            <td>
+                                <strong>drk_list</strong> 3개씩 width: 32% / 가운데 리스트 second 클래스적용 margin: 0 2% 적용 / 공유버튼
+                                <br> - hover: 썸네일 scale(1.1), 리스트 보더색상변경, 타이틀 underline 적용
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>   
+                <div class="site">
+                    사이트주소 : <a href="https://dk.asiae.co.kr/" target="_blank">https://dk.asiae.co.kr/</a>
+                </div>
+            </header>
+            <main>
+                <div class="code_puble">
+                    <div class="color">
+                        <h2>Color</h2>
+                        <p class="tit">공통</p>
+                        <ul>
+                            <li class="first-color">
+                                <p class="c01">FF695C</p>
+                                <div class="color_info">
+                                    <strong>Primary Color</strong>
+                                    메인탑 slide 텍스트, 기사 로딩바, 기사드래그, 추천검색어, 페이지네이션, 구독버튼
+                                </div>
+                            </li>
+                            <li>
+                                <p class="c02">111111</p>
+                                <div class="color_info">
+                                    <strong>Second Color</strong>
+                                    메뉴, 각 타이틀, 기사 텍스트, 푸터
+                                </div>
+                            </li>
+                        </ul>
+                        <p class="tit">Bg Color</p>
+                        <ul>
+                            <li>
+                                <p class="c03">FFFFFF</p>
+                                <div class="color_info">
+                                    <strong>Bg Color</strong>
+                                    배경, 메인탑 슬라이드 타이틀, 구독텍스트
+                                    
+                                </div>
+                            </li>
+                            <li>
+                                <p class="c04">262626</p>
+                                <div class="color_info">
+                                    <strong>Menu Button Color</strong>
+                                    전체메뉴 구독하기 버튼색상
+                                </div>
+                            </li>
+                            <li>
+                                <p class="c05">1A1A1A</p>
+                                <div class="color_info">
+                                    <strong>Slide Lead Color</strong>
+                                    메인탑 슬라이드 리드글 배경색상
+                                </div>
+                            </li>
+                        </ul>
+                        <p class="tit">Font Color</p>
+                        <ul>
+                            <li>
+                                <p class="c06">111111</p>
+                                <div class="color_info">
+                                    <strong>Main Title Color</strong>
+                                    메인 타이틀 - opacity: 0.8 적용
+                                </div>
+                            </li>
+                            <li>
+                                <p class="c07">595959</p>
+                                <div class="color_info">
+                                    <strong>Text Color</strong>
+                                    기사 카테고리, 리드글, SNS 텍스트
+                                </div>
+                            </li>
+                            <li>
+                                <p class="c08">A6ACB4</p>
+                                <div class="color_info">
+                                    <strong>Text Color</strong>
+                                    기사뷰 조회수 컬러
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- font_layout -->
+                    <div class="font_layout">
+                    <!-- font : 공통 -->
+                    <div class="font">
+                        <h2>Font</h2>
+                        <p class="sub-tit">Common</p>
+                        <table class="font_table">
+                            <colgroup>
+                                <col width="30%">
+                                <col width="*">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td class="name">Font-Family</td>
+                                    <td><strong>Body</strong>
+                                    HelveticaNeue-Light, AppleSDGothicNeo-Light,<br>'Noto Sans', 'Roboto-Light', 'Malgun Gothic',<br>'맑은 고딕', Dotum, '돋움', sans-serif
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">메인 메뉴:
+                                        <span>.drk_gnb > li > a</span>
+                                    </td>
+                                    <td>'notokrR' / 19px</td>
+                                </tr>
+                                <tr>
+                                    <td class="name">메인 메뉴 hover
+                                        <span>.drk_gnb > li > a</span>
+                                    </td>
+                                    <td>Font-Style: italic</td>
+                                </tr>
+                                <tr>
+                                    <td class="name">검색창
+                                        <span>.visual_search</span>
+                                    </td>
+                                    <td>추천검색어: notokrM / 24px<br>
+                                        키워드: notokrR / 17px / line-height: 21px
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">메인 타이틀: <span>h2.sub_tit</span></td>
+                                    <td>'notokrLig' / 33px </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">리스트 컨텐츠 카테고리:
+                                        <span>.cate > a</span>
+                                    </td>
+                                    <td>'notokrR' / 14px</td>
+                                </tr>
+                                <tr>
+                                    <td class="name">리스트 컨텐츠 제목:
+                                        <span>.txt_bx > span</span>
+                                    </td>
+                                    <td>'Nanum Myeongjo','Noto Serif KR',serif / 21px</td>
+                                </tr>
+                                <tr>
+                                    <td class="name">썸네일 컨텐츠 제목:
+                                        <span>.txt /.text</span>
+                                    </td>
+                                    <td>'Nanum Myeongjo','Noto Serif KR',serif / 25px</td>
+                                </tr>
+                                <tr>
+                                    <td class="name">리드글:
+                                        <span>.txt /.text</span>
+                                    </td>
+                                    <td>16px / line-height: 23px</td>
+                                </tr>
+                                <tr>
+                                    <td class="name">햄버거 메뉴:
+                                        <span>.dropdown_btn</span>
+                                    </td>
+                                    <td>18px</td>
+                                </tr>
+                                <tr>
+                                    <td class="name">SNS:
+                                        <span>.sns_bx > li .text</span>
+                                    </td>
+                                    <td>'notokrM' / 16px / line-height: -2px</td>
+                                </tr>
+                                <tr>
+                                    <td class="name">구독하기:
+                                        <span>.drk_scribe</span>
+                                    </td>
+                                    <td>
+                                        <strong>타이틀</strong>
+                                        'Nanum Myeongjo','Noto Serif KR',serif / 30px / line-height: 40px
+                                        <br><br>
+                                        <strong>텍스트</strong>
+                                        17px
+                                        <br><br>
+                                        <strong>구독하기 버튼</strong>
+                                        'notokrM' / 19px
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">공지사항
+                                        <span>.drk_fttop .notice</span>
+                                    </td>
+                                    <td>16px</td>
+                                </tr>
+                                <tr>
+                                    <td class="name">푸터 이용약관 및<br> 주소:</td>
+                                    <td>13px / line-height: 65px</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- font: article -->
+                    <div class="font font2">
+                        <h2>Font</h2>
+                        <p class="sub-tit">Article</p>
+                        <table class="font_table">
+                            <colgroup>
+                                <col width="30%">
+                                <col width="*">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td class="name">기사 메인타이틀
+                                        <span>.at_title > h2</span>
+                                    </td>
+                                    <td>'Nanum Myeongjo','Noto Serif KR',serif / 40px / line-height: 50px</td>
+                                </tr>
+                                <tr>
+                                    <td class="name">기사 서브타이틀: <span>.at_title > .sub_txt</span></td>
+                                    <td>'notokrLig' / 33px </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">기사 author 및 날짜:
+                                        <span>.cont_article > .tit_date</span>
+                                    </td>
+                                    <td>13px</td>
+                                </tr>
+                                <tr>
+                                    <td class="name">썸네일 소제목:
+                                        <span>.small_title01</span>
+                                    </td>
+                                    <td>17px</td>
+                                </tr>
+                                <tr>
+                                    <td class="name">에디터 소개:
+                                        <span>.at_intit .naming</span>
+                                    </td>
+                                    <td>
+                                        에디터: 25px<br>
+                                        소개글: 16px
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">카피라이터:
+                                        <span>.copyright</span>
+                                    </td>
+                                    <td>14px / line-height: 1</td>
+                                </tr>
+                                <tr>
+                                    <td class="name">키워드:
+                                        <span>.keyword li a</span>
+                                    </td>
+                                    <td>15px / line-height: 34px</td>
+                                </tr>
+                                <tr>
+                                    <td class="name">다른 이야기도 보실래요?:
+                                        <span>.consinbox</span>
+                                    </td>
+                                    <td>
+                                        타이틀: notokrDem / 33px / line-height: 40px<br>
+                                        기사 리스트: 18px / line-height: 1<br>
+                                        기사 리스트 숫자: font-style: italic
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">기사 팝업창
+                                        <span>.art_popup</span>
+                                    </td>
+                                    <td>
+                                        타이틀: notokrR / 19px<br>
+                                        팝업기사 제목: notokrR / 17px
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- font: search -->
+                    <div class="font font2">
+                        <h2>Font</h2>
+                        <p class="sub-tit">Search</p>
+                        <table class="font_table">
+                            <colgroup>
+                                <col width="30%">
+                                <col width="*">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td class="name">검색결과
+                                        <span>.result_num</span>
+                                    </td>
+                                    <td>
+                                        검색결과: 16px<br>
+                                        정확도 / 최신: 16px 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">결과 리스트: 
+                                        <span>.lst_tabcon</span>
+                                    </td>
+                                    <td>
+                                        제목: 'Nanum Myeongjo','Noto Serif KR',serif / 22px <br>
+                                        리드글: 16px<br>
+                                        날짜와 에디터: 13px
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">추천키워드
+                                        <span>.sch_side</span>
+                                    </td>
+                                    <td>
+                                        추천키워드 타이틀: 16px / line-height: 25px; / letter-spacing: -2px<br>
+                                        키워드: 14px / line-height: 30px
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                    <!-- //font_layout -->
+                    <div class="cont_layout">
+                        <div class="media">
+                            <h2>Mediaquery</h2>
+                            <p class="sub-tit">main</p>
+                            <table class="media_table">
+                            <colgroup>
+                                <col width="20%">
+                                <col width="*">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td class="name">1400px</td>
+                                    <td>메인 슬라이드 arrow 크기변경 
+                                    <br>드링킷 탭 컨텐츠 bg 퍼센트 조정
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">1330px</td>
+                                    <td>메인 슬라이드 텍스트 위치 조정<br>
+                                    메인 슬라이드 arrow 숨김
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">1040px</td>
+                                    <td>섹션 구조 width:100% padding:0 20px<br>
+                                    메인 슬라이드 레이아웃 형태 조정<br>
+                                    드링킷 탭 컨텐츠 전체 조정
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">960px</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="name">910px</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="name">890px</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="name">820px</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="name">790px</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="name">768px</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="name">480px</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="name">425px</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="name">376px</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="name">370px</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="name">320px</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                        <div class="script">
+                            <h2>script</h2>
+                            <table class="script_table">
+                            <colgroup>
+                                <col width="35%">
+                                <col width="*">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td class="name">슬라이드 스와이프</td>
+                                    <td>main, story, log 페이지 상단 적용</td>
+                                </tr>
+                                <tr>
+                                    <td class="name">페이드인아웃 슬라이드</td>
+                                    <td>log 페이지 하단 적용</td>
+                                </tr>
+                                <tr>
+                                    <td class="name">상단버튼</td>
+                                    <td>각 페이지 하단에 적용</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                </div>   
+            </main>
+        </div>
+	</body>
+	
+</html>
+
+
